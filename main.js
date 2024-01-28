@@ -224,7 +224,7 @@ HTMLElement.prototype.slideToggle = function (duration, callback) {
   };
 
   var imageCount = 0;
-  Promise.all(images.map(src => loadImage(`assets/images/webp/${src}`)))
+  Promise.all(images.map(src => loadImage(`${src}`)))
       .then(images => {
           images.forEach(img => {
               context.drawImage(img, 0, 0);
