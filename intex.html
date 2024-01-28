@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore INNAK's solutions for streamlining your digital world. Your vision becomes reality with our innovative approach, leading to unleashed success."> 
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style-minified-file.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+   <title>offline web</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar sticky">
+        <a href="#" class="logo" id="logo">Innak</a>
+        <div class="menu-btn">
+            <div class="menu-btn__lines"></div>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#" class="menu-item">Home</a></li>
+            <li><a href="#" class="menu-item">About us</a></li>
+            <li id="services">
+                <a href="facebook.com" class="menu-item">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="menu-item">Web Development</a></li>
+                    <li><a href="#" class="menu-item">App Development</a></li>
+                    <li><a href="#" class="menu-item">Augmented Reality</a></li>
+                    <li><a href="#" class="menu-item">Automation</a></li>
+                    <li><a href="#" class="menu-item">Mission learning</a></li>
+                    <li><a href="#" class="menu-item">Internet of things</a></li>
+                    <li><a href="#" class="menu-item">Artificial intelligent</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-item">Careers</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="menu-item">Internship</a></li>
+                    <li><a href="#" class="menu-item">Full time</a></li>
+                    <li><a href="#" class="menu-item">Freelancer</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-item">Blog</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="menu-item">Most Popular</a></li>
+                    <li><a href="#" class="menu-item">Latest</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-item" id="contact-us">Contact Us</a></li>
+        </ul>
+    </header>
+    <div class="overlay"></div>
+
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="gradient-blur-background top-right"></div>
+            <div class="container mt-5">
+                <div class="row align-items-center justify-content-center">
+                    <div
+                        class="col-lg-6 col-md-10 col-sm-12 order-lg-2 order-md-1 order-1 text-lg-start text-md-center text-sm-center">
+                        <h1 class="hero-title">Streamlining Your Digital World with Our Solutions,<br><span
+                                class="text-primary-300">Your Vision, Our Innovation, Your Success Unleashed.</span>
+                        </h1>
+                        <p class="text-neutral mt-3 mb-4">At INNAK, we're more than tech innovators; we're your
+                           dedicated partners in crafting personalized digital journeys. Specializing in turning your
+                            ideas into vibrant realities, we ensure a user-friendly and innovative experience. Embrace
+                            the future with INNAK – Where Your Ideas Come to Life!</p>
+                        <a href="/contact-us" class="button bg-primary-300 mt-3">Get Started</a>
+                    </div>
+                    <div class="col-lg-6 col-md-10 col-sm-12 order-md-2 order-lg-1 order-2">
+                        <div id="hero-image" class="hero-image align-items-center justify-content-center">
+                            <canvas id="canvas"></canvas>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gradient-blur-background bottom-left"></div>
+        </section>
+    </main>
+
+    <!-- partial -->
+
+    <script src="./main.js" async defer></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./serviceworker.js')
+            .then((registration) => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.error('Service Worker registration failed:', error);
+            });
+        }
+      </script>
+
+</body>
+
+</html>
