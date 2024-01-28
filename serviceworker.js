@@ -1,10 +1,10 @@
 const CACHE_NAME = 'innak-cache-v1';
 const urlsToCache = [
-  '/innak/',
-  'test.html',
-  'assets/css/header.css',
+  '/offlineweb/',
+  'index.html',
+  'header.css',
   'style-minified-file.css',
-  'assets/js/main.js',
+  'main.js',
   // Add more URLs to cache as needed
 ];
 
